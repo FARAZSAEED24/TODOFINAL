@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: darkcyan;
+    color: white;
+}
+
+.first {
+    display: inline;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    align-items: center;
+    color: cyan;
+    text-align: center;
+}
+
+.second {
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+ul{
+    list-style-type: none;
+}

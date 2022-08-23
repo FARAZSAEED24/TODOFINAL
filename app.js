@@ -7,8 +7,8 @@ function addtodo() {
     // creating inp after clicking on addtask
 
     
-    var inpu = document.createElement("input");
-    var inputext = document.createTextNode(todo_item.value);
+    var li = document.createElement("li");
+    var litext = document.createTextNode(todo_items.value);
 
     // dlt button 
     var delBtn = document.createElement("button");
@@ -22,10 +22,10 @@ function addtodo() {
     editBtn.appendChild(eText);
     editBtn.setAttribute("onclick","edititem(this)")
 
-    inpu.appendChild(inputext);
-    list.appendChild(inpu);
-    inpu.appendChild(delBtn);
-    inpu.appendChild(editBtn);
+    li.appendChild(litext);
+    list.appendChild(li);
+    li.appendChild(delBtn);
+    li.appendChild(editBtn);
     
     todo_item.value=("");
     }
@@ -39,5 +39,9 @@ function deleteall(){
 }
 
 function edititem(e){
+
+    var newval = prompt ("edit",e.parentNode.firstChild.nodeValue)
+    e.parentNode.firstChild.nodeValue = newval
+    console.log(e.parentNode.firstChild.nodeValue)
 
 }
